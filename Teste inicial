@@ -3,14 +3,15 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import AgglomerativeClustering
 import numpy as np
 
+## Método do cotovelo 
 
-# Carregar dados do Excel
-dados = pd.read_excel('neurito_ctl_ata.xlsx', sheet_name = "Sheet1")
+# Carregar dados do Excel - tabela com os valores de neurito CTL
+dados1 = pd.read_excel('neurito_ctl_ata.xlsx', sheet_name = "Sheet1")
 print(dados)
 
 
 # Selecionar as colunas relevantes
-X = dados[['quant_primario', 'mean_primario', 
+X = dados1[['quant_primario', 'mean_primario', 
            'quant_secundario', 'mean_secundario', 
            'quant_terciario', 'mean_terciario']]
 
